@@ -32,6 +32,8 @@ test('Verify "All Books" link is visible after user login', async ({
   await page.fill('input[name="password"]', "123456");
   await page.click('input[type="submit"]');
 
+  await page.waitForURL("http://localhost:3000/catalog");
+
   const allBooksLink = await page.$('a[href="/catalog"]');
   const isAllBooksLinkVisible = await allBooksLink.isVisible();
 
