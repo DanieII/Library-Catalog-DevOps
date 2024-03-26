@@ -1,3 +1,3 @@
-const host = "https://library-catalog-devops.onrender.com";
+const host = "http://localhost:3030";
 
 export { host };
