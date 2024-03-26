@@ -21,8 +21,8 @@ jobs:
     - name: Change host to localhost
       run: echo "const host = \"http://localhost:3030\";\n\nexport { host };" > src/api/host.js
     - name: Start backend 
-      run: npm run start-be
+      run: npm run start-be &
     - name: Start frontend
-      run: npm run start-fe
+      run: npm run start-fe &
     - name: Execute tests
       run: npm run test-ui
