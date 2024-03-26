@@ -17,9 +17,9 @@ jobs:
         node-version: 20.x
         cache: 'npm'
     - name: Install dependencies
-      run: npm i
+      run: npm install
     - name: Change host to localhost
-      run: echo "const host = \"http://localhost:3030\";\n\nexport { host };" > src/api/host.js
+      run: echo "export const settings = { host:\"http://localhost:3030\" };" > src/config.js
     - name: Start backend 
       run: npm run start-be &
     - name: Start frontend
