@@ -27,4 +27,4 @@ jobs:
     - name: Install playwright dependencies
       run: npx playwright install
     - name: Execute tests
-      run: npm run test-ui
+      run: npx playwright test
